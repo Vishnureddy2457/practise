@@ -5,7 +5,7 @@ const Home = () => {
 
       <div className=" ">
 
-      {/* <Carousel/> */}
+      <Carousel/>
 
       </div>
 
