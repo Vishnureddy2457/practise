@@ -12,8 +12,7 @@ function App() {
     <Router>
     <Navbar />
     <Routes>
-      {/* <Route path="/" element={<Home />} /> */}
-      {/* <Route path="/about" element={<About />} /> */}
+      <Route path="/" element={<Home />} /> 
       <Route path="/Profile" element={<Profile />} />
       {/* <Route path="*" element={<NotFound />} /> */}
     </Routes>
