@@ -2,6 +2,7 @@ import React, { Profiler } from "react"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Profile from "./pages/profile";
+import Home from "./pages/Home";
 
 // import './App.css'
 
@@ -12,7 +13,8 @@ function App() {
     <Router>
     <Navbar />
     <Routes>
-      <Route path="/" element={<Home />} /> 
+      <Route path="/Home" element={<Home />} />
+      {/* <Route path="/about" element={<About />} /> */}
       <Route path="/Profile" element={<Profile />} />
       {/* <Route path="*" element={<NotFound />} /> */}
     </Routes>

@@ -2,6 +2,7 @@ import React from "react";
 
 function ProfileCard() {
   return (
+
     <div className="flex justify-center items-center min-h-screen bg-gray-100 dark:bg-gray-900">
       <div className="bg-white dark:bg-gray-800 min-w-[380px] max-w-[450px] md:max-w-[550px] lg:max-w-[650px] h-auto rounded-2xl shadow-lg shadow-stone-700 dark:shadow-red-500">
         <header className="bg-[url('/images/bg-pattern-card.svg')] bg-no-repeat bg-cover bg-center h-32 md:h-40 lg:h-48 rounded-t-2xl flex justify-center items-center">
@@ -32,6 +33,9 @@ function ProfileCard() {
           </div>
         </div>
       </div>
+    <div>
+      <h1 className='text-red-500 text-6xl  flex justify-center'>This is your Profile</h1>
+    </div>
     </div>
   );
 }
