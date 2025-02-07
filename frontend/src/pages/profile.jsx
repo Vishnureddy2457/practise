@@ -33,10 +33,7 @@ function ProfileCard() {
           </div>
         </div>
       </div>
-    <div>
-      <h1 className='text-red-500 text-6xl  flex justify-center'>This is your Profile</h1>
-    </div>
-    </div>
+      </div>
   );
 }
 

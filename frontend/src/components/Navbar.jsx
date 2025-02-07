@@ -136,23 +136,23 @@ const Navbar = () => {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="sticky" sx={{ top: 0, backgroundColor: "black" }}>
         <Toolbar>
-          <IconButton size="large" edge="start" sx={{ color: "red" }} onClick={toggleDrawer(true)}>
+          <IconButton size="large" edge="start" sx={{ color: "white" }} onClick={toggleDrawer(true)}>
             <MenuIcon />
           </IconButton>
 
-          <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1, color: "red" }}>
+          <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1, }}>
             TEST PROJECT
           </Typography>
 
           <Search>
             <SearchIconWrapper>
-              <SearchIcon sx={{ color: "red" }} />
+              <SearchIcon sx={{ color: "white" }} />
             </SearchIconWrapper>
             <StyledInputBase placeholder="Search…" inputProps={{ "aria-label": "search" }} />
           </Search>
 
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
-            <IconButton size="large" edge="end" aria-controls={menuId} aria-haspopup="true" onClick={handleProfileMenuOpen} sx={{ color: "red" }}>
+            <IconButton size="large" edge="end" aria-controls={menuId} aria-haspopup="true" onClick={handleProfileMenuOpen} sx={{ color: "white" }}>
               <AccountCircle />
             </IconButton>
           </Box>
