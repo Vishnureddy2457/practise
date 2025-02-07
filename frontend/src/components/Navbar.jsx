@@ -6,7 +6,6 @@ import {
   IconButton,
   Typography,
   InputBase,
-  Badge,
   MenuItem,
   Menu,
   Drawer,
@@ -22,8 +21,6 @@ import {
   Menu as MenuIcon,
   Search as SearchIcon,
   AccountCircle,
-  Mail as MailIcon,
-  Notifications as NotificationsIcon,
   MoveToInbox as InboxIcon,
 } from "@mui/icons-material";
 import { useNavigate, Link } from "react-router-dom";
@@ -69,12 +66,10 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 const Navbar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
-  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const navigate = useNavigate();
 
   const isMenuOpen = Boolean(anchorEl);
-  const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -82,7 +77,6 @@ const Navbar = () => {
 
   const handleMenuClose = () => {
     setAnchorEl(null);
-    setMobileMoreAnchorEl(null);
     navigate("/Profile");
   };
 
@@ -111,11 +105,11 @@ const Navbar = () => {
   const sidebarList = (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
       <List>
-        {["Home", "Profile", "Messages", "Notifications"].map((text, index) => (
+        {["Home", "Profile"].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton component={Link} to={`/${text.toLowerCase()}`}>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                {index % 2 === 0 ? <InboxIcon /> : <InboxIcon />}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>
@@ -128,7 +122,7 @@ const Navbar = () => {
           <ListItem key={text} disablePadding>
             <ListItemButton component={Link} to={`/${text.toLowerCase()}`}>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                {index % 2 === 0 ? <InboxIcon /> : <InboxIcon />}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>
@@ -140,33 +134,25 @@ const Navbar = () => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="sticky" sx={{ top: 0, backgroundColor: "black" }}>
         <Toolbar>
-          {/* Sidebar Menu Icon */}
-          <IconButton size="large" edge="start" color="inherit" onClick={toggleDrawer(true)}>
+          <IconButton size="large" edge="start" sx={{ color: "red" }} onClick={toggleDrawer(true)}>
             <MenuIcon />
           </IconButton>
 
-          <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
-            MUI Navbar
+          <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1, color: "red" }}>
+            TEST PROJECT
           </Typography>
 
           <Search>
             <SearchIconWrapper>
-              <SearchIcon />
+              <SearchIcon sx={{ color: "red" }} />
             </SearchIconWrapper>
             <StyledInputBase placeholder="Search…" inputProps={{ "aria-label": "search" }} />
           </Search>
 
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
-            <IconButton size="large" color="inherit">
-              
-                <MailIcon />
-            </IconButton>
-            <IconButton size="large" color="inherit">
-                <NotificationsIcon />
-            </IconButton>
-            <IconButton size="large" edge="end" aria-controls={menuId} aria-haspopup="true" onClick={handleProfileMenuOpen} color="inherit">
+            <IconButton size="large" edge="end" aria-controls={menuId} aria-haspopup="true" onClick={handleProfileMenuOpen} sx={{ color: "red" }}>
               <AccountCircle />
             </IconButton>
           </Box>
@@ -175,7 +161,6 @@ const Navbar = () => {
 
       {renderMenu}
 
-      {/* Sidebar Drawer */}
       <Drawer open={drawerOpen} onClose={toggleDrawer(false)}>
         {sidebarList}
       </Drawer>
