@@ -105,7 +105,7 @@ const Navbar = () => {
   const sidebarList = (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
       <List>
-        {["Home", "Profile"].map((text, index) => (
+        {["Home", "Profile" , "Dashboard"].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton component={Link} to={`/${text.toLowerCase()}`}>
               <ListItemIcon>
@@ -164,7 +164,7 @@ const Navbar = () => {
       <Drawer open={drawerOpen} onClose={toggleDrawer(false)}>
         {sidebarList}
       </Drawer>
-    </Box>
+    </Box> 
   );
 };
 

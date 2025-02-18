@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Profile from "./pages/profile";
 import Home from "./pages/Home";
+import NotFound from "./pages/Errorpage";
 
 // import './App.css'
 
@@ -10,16 +11,16 @@ function App() {
 
   return (
     <>
-    <Router>
-    <Navbar />
+
+  <Router>
+    <Navbar /> 
     <Routes>
-      <Route path="/Home" element={<Home />} />
-      {/* <Route path="/about" element={<About />} /> */}
+      <Route path="/" element={<Home />} />
       <Route path="/Profile" element={<Profile />} />
-      {/* <Route path="*" element={<NotFound />} /> */}
+      <Route path="*" element={<NotFound />} />
     </Routes>
   </Router>
-
+      
     </>
   )
 }
