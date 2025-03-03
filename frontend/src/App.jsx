@@ -11,6 +11,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import AdminPanel from "./pages/admin/Additems";
 import Contactform from "./pages/Contact";
 import Error from "./pages/Errorpage";
+import Calling from "./components/Video call/Calling";
 // import './App.css'
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
       <Route path="/Trust" element={<TrustSystem />} />
       <Route path="/Admin" element={<AdminPanel />} />
       <Route path="/contact" element={<Contactform />} />
+      <Route path="/video-call" element={< Calling/>} />
       <Route path="*" element={<Error />} />
     </Routes>
   </Router>
