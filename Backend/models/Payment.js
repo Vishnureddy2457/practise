@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+//schema
 const paymentSchema = new mongoose.Schema({
   tenantName: { type: String, required: true },
   property: { type: String, required: true },

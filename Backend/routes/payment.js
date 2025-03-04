@@ -39,6 +39,7 @@ const express = require('express');
 const router = express.Router();
 const Payment = require('../models/Payment');
 
+// Fetch payment details from DB and display them on the payment page
 router.get('/details', async (req, res) => {
   // Simulate fetching payment details from DB
   const paymentDetails = {
