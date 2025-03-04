@@ -105,7 +105,7 @@ const Navbar = () => {
   const sidebarList = (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
       <List>
-        {["Home", "Profile" , "TrustSystem", "Video Call"].map((text, index) => (
+        {["Home", "Profile" , "TrustSystem", "Videocall", "upipayment"].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton component={Link} to={`/${text.toLowerCase()}`}>
               <ListItemIcon>

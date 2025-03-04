@@ -5,20 +5,20 @@ import Profile from "./pages/profile";
 import Home from "./pages/Home";
 // import NotFound from "./pages/Errorpage";
 import TrustSystem from "./pages/Rating/TrustSystem";
-import TrustSystempage from "./pages/Righting";
+// import TrustSystempage from "./pages/Righting";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AdminPanel from "./pages/admin/Additems";
 import Contactform from "./pages/Contact";
 import Error from "./pages/Errorpage";
-import Calling from "./components/Video call/Calling";
+// import Calling from "./components/Video call/Calling";
+import UpiPayment from "./components/upipayments/UpiPayment";
 // import './App.css'
 
 function App() {
 
   return (
     <>
-
   <Router>
     <Navbar /> 
     <ToastContainer />
@@ -29,11 +29,12 @@ function App() {
       <Route path="/Trust" element={<TrustSystem />} />
       <Route path="/Admin" element={<AdminPanel />} />
       <Route path="/contact" element={<Contactform />} />
-      <Route path="/video-call" element={< Calling/>} />
+      {/* <Route path="/videocall" element={< Calling/>} />
+      <Route path="/videocall/:id" element={< Calling/>} /> */}
+      <Route path="/upipayment" element={< UpiPayment/>} />
       <Route path="*" element={<Error />} />
     </Routes>
   </Router>
-      
     </>
   )
 }
